@@ -1,1 +1,1 @@
-const testModule = import('test-module').then(lol => lol.somethong());
+const testModule = import('test-module').then(lol => lol.something());
