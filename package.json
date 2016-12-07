@@ -1,0 +1,42 @@
+{
+  "name": "babel-plugin-dynamic-import-system-import",
+  "version": "1.0.0",
+  "description": "Babel plugin to transpile import() to System.import()",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "test": "npm run lint && npm run tests-only",
+    "tests-only": "mocha",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chicoxyzzy/babel-plugin-dynamic-import-system-import.git"
+  },
+  "keywords": [
+    "babel",
+    "plugin",
+    "dynamic",
+    "import",
+    "System.import",
+    "system"
+  ],
+  "author": "Sergey Rubanov <chi187@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-types": "^6.19.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.8.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.11.1",
+    "eslint-config-airbnb-base": "^10.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "mocha": "^3.2.0"
+  }
+}
