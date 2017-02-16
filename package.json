@@ -7,7 +7,8 @@
     "build": "babel src --out-dir lib",
     "test": "npm run lint && npm run tests-only",
     "tests-only": "mocha",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prepublish": "npm run test && npm run build"
   },
   "repository": {
     "type": "git",
