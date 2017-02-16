@@ -1,6 +1,6 @@
 # babel-plugin-import-node
 
-Babel plugin to transpile `import()` to `Promise.resolve(require())`.
+Babel plugin to transpile `import()` to `requireAsync()`.
 
 **NOTE:** Babylon >= v6.12.0 is required to correct parse dynamic imports.
 
@@ -24,9 +24,15 @@ const asyncRoutes = [
 Out:
 
 ```js
+var _requireAsync = function requireAsync(modulePath) {
+  return Promise.resolve().then(function() {
+    return require(modulePath);
+  });
+};
+
 const asyncRoutes = [
-  Promise.resolve(require('./root')).then(module => module.default),
-  Promise.resolve(require(`./named_${subRoute}`)),
+  _requireAsync('./root').then(module => module.default),
+  _requireAsync(`./named_${subRoute}`),
 ]
 ```
 

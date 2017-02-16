@@ -1,7 +1,7 @@
 {
   "name": "babel-plugin-import-node",
   "version": "1.0.0",
-  "description": "Babel plugin to transpile import() to Promise.resolve(require())",
+  "description": "Babel plugin to transpile import() to requireAsync()",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src --out-dir lib",
