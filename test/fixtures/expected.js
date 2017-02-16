@@ -1,2 +1,8 @@
-const testModule = Promise.resolve(require('test-module')).then(lol => lol.something());
-const secondModule = Promise.resolve(require(`./local_${name}`));
+var _requireAsync = function requireAsync(modulePath) {
+  return Promise.resolve().then(function () {
+    return require(modulePath);
+  });
+};
+
+const testModule = _requireAsync('test-module').then(lol => lol.something());
+const secondModule = _requireAsync(`./local_${name}`);
