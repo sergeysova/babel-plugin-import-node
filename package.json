@@ -1,7 +1,7 @@
 {
-  "name": "babel-plugin-dynamic-import-system-import",
+  "name": "babel-plugin-import-node",
   "version": "1.0.0",
-  "description": "Babel plugin to transpile import() to System.import()",
+  "description": "Babel plugin to transpile import() to Promise.resolve(require())",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src --out-dir lib",
@@ -11,17 +11,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chicoxyzzy/babel-plugin-dynamic-import-system-import.git"
+    "url": "git+https://github.com/lestad/babel-plugin-import-node.git"
   },
   "keywords": [
     "babel",
     "plugin",
     "dynamic",
     "import",
-    "System.import",
-    "system"
+    "require",
+    "async"
   ],
-  "author": "Sergey Rubanov <chi187@gmail.com>",
+  "author": "Sergey Sova <i.am@lestad.net> (https://lestad.top)",
   "license": "MIT",
   "dependencies": {
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
